@@ -1,0 +1,81 @@
+.uncomplete {
+  cursor: pointer;
+  position: relative;
+  padding: 8px 50px;
+  margin: 8px auto;
+  background: rgba(218, 248, 242, 0.986);
+  border-radius: 5px;
+  font-size: 18px;
+  transition: 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.uncomplete:hover {
+  background: rgba(164, 252, 237, 0.986);
+}
+
+.completed {
+  cursor: pointer;
+  position: relative;
+  padding: 8px 50px;
+  margin: 8px auto;
+  border-radius: 5px;
+  background: rgba(241, 241, 241, 0.986);
+  color: rgb(196, 196, 196);
+  text-decoration: line-through;
+  display: flex;
+  justify-content: space-between;
+}
+
+.completed::before {
+  content: "";
+  position: absolute;
+  border-color: rgb(172, 231, 226);
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+.input-form {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0 2rem 0;
+}
+
+.input {
+  width: 90%;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 2px solid #00d0aa;
+  box-sizing: border-box;
+}
+
+.input-btn {
+  width: 10%;
+  display: inline-block;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  background-color: #00d0aa;
+}
+
+.input-btn:hover {
+  background-color: #5bd4be;
+}
+
+.result-card {
+  margin: 5% 15%;
+  padding: 1rem;
+}
