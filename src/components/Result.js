@@ -11,12 +11,12 @@ function Result({ total, inputValue, list, sum, text }) {
           : "Total sum is: " + total}
         <div> {list.length === 0 ? null : "Concat all Todos: " + list}</div>
         <div>
-          {inputValue.length === 0
+          {inputValue.length === 0 || total === total
             ? null
             : "Sum of all Todos that is a number: " + sum}
         </div>
         <div>
-          {text.length === 0 ? null : "Concat all string in Todos: " + text}
+          {text.length === 0 || typeof total == "undefined" ? null : "Concat all string in Todos: " + text}
         </div>
       </CardContent>
     </Card>
