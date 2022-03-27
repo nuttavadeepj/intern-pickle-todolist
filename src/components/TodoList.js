@@ -5,7 +5,6 @@ import Result from "./Result";
 import "../styles/todolist.css";
 
 function TodoList({ todoList, handleComplete, handleDelete }) {
-
   //Check all TodoList, if all are number then sum all, if not then concat all string and number
   var inputValue = [];
   var list = [];
@@ -59,13 +58,15 @@ function TodoList({ todoList, handleComplete, handleDelete }) {
             ))
           : alert("Please enter a todo")}
       </div>
-      <Result
-        total={total}
-        inputValue={inputValue}
-        list={list}
-        sum={sum}
-        text={text}
-      />
+      {inputValue.length === 0 ? null : (
+        <Result
+          total={total}
+          inputValue={inputValue}
+          list={list}
+          sum={sum}
+          text={text}
+        />
+      )}
     </Fragment>
   );
 }
